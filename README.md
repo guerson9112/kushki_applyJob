@@ -47,7 +47,8 @@ Se realizó el frontend en Angular
 
 #### Frontend
 * Ve al directorio FronEnd/Prueba
-* Corre npm install
+* npm install
+* ng serve
 
 ### 4.Implementación
  https://applyjob-kushki.herokuapp.com
