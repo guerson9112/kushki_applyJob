@@ -40,13 +40,14 @@ Se realizó el frontend en Angular
 * KushkiJS (https://api-docs.kushkipagos.com/docs/libraries/ZG9jOjI1MjAxNTYw-kushki-js)
 
 ### 3. Instalación e implementación local del proyecto 
+Descarga el repositorio
 #### Backend
-* Ve al directorio Backend
+* cd Backend
 * npm install
 * npm run dev
 
 #### Frontend
-* Ve al directorio FronEnd/Prueba
+* cd FronEnd/Prueba
 * npm install
 * ng serve
 
