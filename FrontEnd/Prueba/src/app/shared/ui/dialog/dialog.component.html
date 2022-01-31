@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Advertencia</h1>
+<div mat-dialog-content>
+  <p>¿Desea añadir el producto al carrito?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose(false)">Cancelar</button>
+  <button mat-button (click)="onClose(true)" cdkFocusInitial>Añadir</button>
+</div>

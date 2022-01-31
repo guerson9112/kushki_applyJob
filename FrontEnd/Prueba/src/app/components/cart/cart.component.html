@@ -1,0 +1,136 @@
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="item">
+      <th mat-header-cell *matHeaderCellDef> Obra </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      <td mat-footer-cell *matFooterCellDef style="background-color: rgb(134, 194, 194);"> Total </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef> Precio </th>
+      <td mat-cell *matCellDef="let element"> $ {{element.price}} </td>
+      <td mat-footer-cell *matFooterCellDef style="background-color: rgb(134, 194, 194);"> {{ total | currency}} </td>
+    </ng-container>
+  
+   
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>
+
+
+  <mat-card class="custom-card"  *ngIf="!kushkiSrv.successTransction">
+    <form [formGroup]="formGroup" novalidate (ngSubmit)="formGroup.valid && requestKushki()">
+
+      <mat-form-field style="width: 400px" appearance="fill">
+        <mat-label>Propietario/a</mat-label>
+        <input matInput formControlName="prop"  >
+        <mat-error *ngIf="formGroup.controls['prop'].hasError('required')">
+          Ingrese el nombre del propietario de la tarjeta
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 400px" appearance="fill">
+        <mat-label>Número de tarjeta</mat-label>
+        <input matInput formControlName="card" type="number">
+        <mat-error *ngIf="formGroup.controls['card'].hasError('required')">
+          Ingrese el número de su tarjeta
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls['card'].hasError('pattern')">
+          Solo números
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls.card.errors?.minlength">
+          Ingrese 16 números mínimo
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls.card.errors?.maxlength">
+          Ingrese 16 números máximo
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100px; margin-right: 2px;" appearance="fill">
+        <mat-label>Mes</mat-label>
+         <mat-select formControlName="month">
+              <mat-option *ngFor="let month of months" [value]="month">
+                {{month}}
+              </mat-option>
+        </mat-select>
+        <mat-error *ngIf="formGroup.controls['month'].hasError('required')">
+          *Obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100px; margin-right: 20px;" appearance="fill">
+        <mat-label>Año</mat-label>
+         <mat-select formControlName="year"   >
+              <mat-option *ngFor="let year of years" [value]="year">
+                {{year}}
+              </mat-option>
+        </mat-select>
+        <mat-error *ngIf="formGroup.controls['year'].hasError('required')">
+          *Obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100px" appearance="fill">
+        <mat-label>CVV*</mat-label>
+        <input matInput formControlName="cvv" type="password">
+        <mat-error *ngIf="formGroup.controls['cvv'].hasError('required')">
+          *Obligatorio
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls['cvv'].hasError('pattern')">
+          Solo números
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls.cvv.errors?.minlength">
+          3 dígitos mínimo
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls.cvv.errors?.maxlength">
+          4 dígitos máximo
+        </mat-error>
+      </mat-form-field>
+      <mat-error *ngIf="dateError ">Fecha de expiración no válida</mat-error>
+      <mat-card-actions>
+        
+        <button mat-raised-button color="primary" [disabled]="!(total > 0) || payButton">Pagar ${{ total }}</button>
+      </mat-card-actions>
+
+    </form>
+
+     <img mat-card-sm-image [src]="imageSource">
+    
+    
+    <p *ngIf="kushkiSrv.token" style="color:rgb(37, 109, 109)">Token: {{kushkiSrv.token}}  </p>
+    <p *ngIf="kushkiSrv.errorTransction" style="color: crimson;">Error: Transacción declinada </p>
+    <p *ngIf="kushkiSrv.code" style="color: crimson;">Error code: {{kushkiSrv.code}} </p>
+
+    
+  </mat-card>
+
+  <mat-card class="custom-card"  *ngIf="kushkiSrv.successTransction">
+    <p>
+      <mat-icon aria-hidden="false" style="color:rgb(134, 194, 166);">check_circle</mat-icon>
+    </p>
+    <p style="color:rgb(134, 194, 166); font-size: 12px">
+      Transacción exitosa
+    </p>
+    <mat-form-field appearance="fill" style=" width: 400px;">
+      
+      <textarea matInput style="color:rgb(134, 194, 166); height: 200px;" readonly>
+        {{kushkiSrv.successData}} 
+      </textarea>
+    </mat-form-field>
+    <button mat-button routerLink="" routerLinkActive="router-link-active" >
+      volver al Inicio
+    </button>
+  </mat-card>
+
+  
+
+
+
+  <ngx-loading [show]="kushkiSrv.loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>

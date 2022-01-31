@@ -1,0 +1,27 @@
+
+
+<mat-card *ngFor="let art of arts" class="custom-card">
+  <mat-card-title-group>
+    <mat-card-title>{{ art.title }}</mat-card-title>
+    <mat-card-subtitle style="font-size: smaller;">{{art.autor}}</mat-card-subtitle>
+    <mat-card-subtitle>${{art.price}}</mat-card-subtitle>
+    <img mat-card-lg-image [src]="art.image">
+  </mat-card-title-group>
+  <mat-card-content>
+    {{art.descripcion}}
+  </mat-card-content>
+  <mat-card-actions  class="card-button">
+    <button  mat-button color="primary" (click)="addToCart(art)">
+      Añadir al carrito
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<div *ngIf="!(arts.length > 0 )">
+  <h1>No hay elementos para mostrar</h1>
+</div>
+
+
+
+

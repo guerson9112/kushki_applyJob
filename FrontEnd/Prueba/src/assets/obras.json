@@ -1,0 +1,46 @@
+{
+    "obras": [
+        {
+            "id": "1",
+            "title": "Naturaleza y Artificio. Alegoría XXI",
+            "price": 4600,
+            "image":"https://cdn.shopify.com/s/files/1/2718/0726/products/IMG_9837_a233effb-c62a-4be1-b356-6065646d7221_720x.jpg?v=1583533561",
+            "descripcion": "Este cuadro pretende hacer reflexionar sobre qué es la belleza. ¿Acaso lo bello está en la naturaleza? ¿Acaso la juventud o las obras de arte que representan nuestros mejores momentos son símbolos de lo bello? Un esqueleto de madera coronado de laurel posa su mano en la cabeza de un efebo. Entre hojas secas y naranjas ocurre toda la escena. El esqueleto no tejen piernas. ¿Es un fantasma?",
+            "autor": "Antonio García Villarán",
+            "sku": "10101041",
+            "quantity": 1
+        },
+
+        {
+            "id": "2",
+            "title": "La mascarada andaluza. Alegoría XVIII",
+            "price": 4300,
+            "image":"https://cdn.shopify.com/s/files/1/2718/0726/products/IMG_0502_540x.jpg?v=1525034377",
+            "descripcion": "El Carnaval es algo más que una fiesta. ¿Necesitamos la máscara para sobrevivir o son caprichos  que nos ayudan a conseguir lo que queremos? ¿Podríamos vivir sin máscaras o son una herramienta para la supervivencia en sociedad? A veces tienes que ser león, otras cordero. Hay días en los que te comportas como un mono y otros en los que eres un rostro blanco carente de personalidad. ¿Quienes somos en realidad?",
+            "autor": "Antonio García Villarán",
+            "sku": "10101042",
+            "quantity": 1
+        },
+        {
+            "id": "3",
+            "title": "Uno y Uno",
+            "price": 170,
+            "image":"https://cdn.shopify.com/s/files/1/2718/0726/products/CAM07540_900x.jpg?v=1515794523",
+            "descripcion": "Libro compuesto por un poema escrito e ilustrado por Antonio García Villarán, quien además ha diseñado y realizado las labores de encuadernación. La tipografía utilizada está también trazada con diferentes técnicas gráficas, usando diversos tipos y medidas que se unen expresivamente a las imágenes formando parte de un todo.",
+            "autor": "Antonio García Villarán",
+            "sku": "10101043",
+            "quantity": 1
+        },
+        {
+            "id": "4",
+            "title": "Respirar",
+            "price": 230,
+            "image":"https://cdn.shopify.com/s/files/1/2718/0726/products/CAM04821_720x.jpg?v=1515794226",
+            "descripcion": "Libro compuesto por un poema que consta de cinco partes y dibujos originales. Está escrito e ilustrado por Antonio García Villarán, quien además ha diseñado y realizado las labores de encuadernación. La tipografía utilizada está también trazada con diferentes técnicas gráficas, usando diversos tipos y medidas que se unen expresivamente a las imágenes formando parte de un todo.",
+            "autor": "Antonio García Villarán",
+            "sku": "10101044",
+            "quantity": 1
+        }
+        
+    ]
+}
