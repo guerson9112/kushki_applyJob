@@ -1,13 +1,13 @@
 # kushki_apply
 Este repositorio contiene los archivos requeridos de la prueba técnica para Ingeniero de Soporte en Kushki
 
-Implemnetación: https://applyjob-kushki.herokuapp.com
+Implementación: https://applyjob-kushki.herokuapp.com
 
 ## Table of Contents
 1. Contenido del repositorio
 2. Tecnologías
 3. Instalación e implementación del proyecto
-4. Implementación del proyecto
+4. Implementación
 
 
 ### 1. Contenido del repositorio
@@ -46,5 +46,5 @@ PDF que contiene el feed back requerido para esta prueba técnica
 * Ve al directorio FronEnd/Prueba
 * Corre npm install
 
-### 4.Implementación en Heroku
+### 4.Implementación
  https://applyjob-kushki.herokuapp.com
