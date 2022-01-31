@@ -39,10 +39,11 @@ Se realizó el frontend en Angular
 * Alerts:  Sweet Alert 2 (https://sweetalert2.github.io/)
 * KushkiJS (https://api-docs.kushkipagos.com/docs/libraries/ZG9jOjI1MjAxNTYw-kushki-js)
 
-### 3. Instalación e implementación del proyecto
+### 3. Instalación e implementación local del proyecto 
 #### Backend
 * Ve al directorio Backend
-* Corre npm install
+* npm install
+* npm run dev
 
 #### Frontend
 * Ve al directorio FronEnd/Prueba
