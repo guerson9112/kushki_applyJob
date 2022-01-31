@@ -5,6 +5,7 @@ Este repositorio contiene los archivos requeridos de la prueba técnica para Ing
 1. Contenido del repositorio
 2. Tecnologías
 3. Instalación e implementación del proyecto
+4. Implementación del proyecto
 
 
 ### 1. Contenido del repositorio
@@ -42,3 +43,6 @@ PDF que contiene el feed back requerido para esta prueba técnica
 #### Frontend
 * Ve al directorio FronEnd/Prueba
 * Corre npm install
+
+### 4.Implementación en Heroku
+ https://applyjob-kushki.herokuapp.com
