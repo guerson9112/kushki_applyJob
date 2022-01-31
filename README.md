@@ -1,6 +1,8 @@
 # kushki_apply
 Este repositorio contiene los archivos requeridos de la prueba técnica para Ingeniero de Soporte en Kushki
 
+Implemnetación: https://applyjob-kushki.herokuapp.com
+
 ## Table of Contents
 1. Contenido del repositorio
 2. Tecnologías
