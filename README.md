@@ -24,6 +24,7 @@ PDF que contiene el feed back requerido para esta prueba técnica
 
 ### 2. Tecnologías
 #### Backend
+El backend fue realizado en Node
 * NodeJS v14.15.5
 * express 4.17.2
 * express-validator 6.14.0
@@ -32,6 +33,7 @@ PDF que contiene el feed back requerido para esta prueba técnica
 * cors 2.8.5
 
 #### Frontend
+Se realizó el frontend en Angular
 * Framework Javascript: Angular 12
 * Styles Framework :    Angular Material (https://material.angular.io/)
 * Alerts:  Sweet Alert 2 (https://sweetalert2.github.io/)
