@@ -40,5 +40,5 @@ PDF que contiene el feed back requerido para esta prueba técnica
 * Corre npm install
 
 #### Frontend
-* Ve al direcotorio FronEnd/Prueba
+* Ve al directorio FronEnd/Prueba
 * Corre npm install
